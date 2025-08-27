@@ -14,8 +14,7 @@ function generateColors(){
     colorContainerEls.forEach((colorContainerEl) => {
         const newColor = randomColor();
         colorContainerEl.style.backgroundColor = newColor;
-        const newColorCode = randomColor();
-        colorContainerEl.innerText = newColorCode;
+        colorContainerEl.innerText = newColor;
     })
   
 }
@@ -26,7 +25,7 @@ function randomColor() {
     let g = Math.floor(Math.random() * 255);
     let colorCode = 'rgb(' + r + ', ' + g + ', ' + b + ')';
 
-    return colorCode
+    return 'rgb(' + r + ', ' + g + ', ' + b + ')'
 
 }
 
