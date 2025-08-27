@@ -14,6 +14,8 @@ function generateColors(){
     colorContainerEls.forEach((colorContainerEl) => {
         const newColor = randomColor();
         colorContainerEl.style.backgroundColor = newColor;
+        const newColorCode = randomColor();
+        colorContainerEl.innerText = newColorCode;
     })
   
 }
@@ -22,7 +24,10 @@ function randomColor() {
     let r = Math.floor(Math.random() * 255);
     let b = Math.floor(Math.random() * 255);
     let g = Math.floor(Math.random() * 255);
+    let colorCode = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+
     return 'rgb(' + r + ', ' + g + ', ' + b + ')'
+
 }
 
 
@@ -33,6 +38,8 @@ test.addEventListener('click', function(){
         const newColor = randomColor();
         colorContainerEl.style.backgroundColor = newColor;
         console.log('--> ' + newColor + ' <--'); 
+        const newColorCode = randomColor();
+        colorContainerEl.innerText = newColorCode;
     })
 });
 
