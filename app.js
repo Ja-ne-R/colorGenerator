@@ -26,7 +26,7 @@ function randomColor() {
     let g = Math.floor(Math.random() * 255);
     let colorCode = 'rgb(' + r + ', ' + g + ', ' + b + ')';
 
-    return 'rgb(' + r + ', ' + g + ', ' + b + ')'
+    return colorCode
 
 }
 
